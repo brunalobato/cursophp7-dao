@@ -22,11 +22,19 @@ $usuarios = $sql->select("SELECT * FROM tblusuario");
 
 
 //carrega um usuario usando o login e a senha   
+//$usuario = new Usuario();
+//$usuario->login("brunalobato","12345");
+
+//echo $usuario;
+
+//enserindo um usuario
+//$aluno = new Usuario("aluno","@luno");
+//$aluno->insert();
+//echo $aluno;
+
 $usuario = new Usuario();
-$usuario->login("brunalobato","12345");
+$usuario->loadById(8);
+$usuario->update("professor", "5656");
 
 echo $usuario;
-
-
-
 ?>
